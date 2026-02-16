@@ -2,6 +2,8 @@
 
 Portafolio personal de **Cristian David Alvarez Torres**, desarrollador fullstack junior con enfoque en React, Laravel, PostgreSQL y marketing digital.
 
+**[Ver en vivo →](https://cristian-alvarez-byjs.vercel.app)**
+
 ## Tech Stack
 
 - **Framework:** Next.js 16
