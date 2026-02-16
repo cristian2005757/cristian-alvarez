@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-color: #18181b;
+  color: #fafafa;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 72rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Acento dev: azul/cian + morado glow */
+.glow {
+  box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.25),
+    0 12px 40px rgba(99, 102, 241, 0.15);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #22d3ee, #a78bfa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Profile card premium - borde fino, glow cian/morado, gradiente de fondo */
+/* Chips: separación clara entre elementos (fallback si Tailwind gap falla) */
+.profile-chips > span {
+  margin: 0.25rem;
+}
+
+.profile-card {
+  position: relative;
+  background: linear-gradient(145deg, #18181b 0%, #27272a 40%, #1e1e24 100%);
+  border: 1px solid rgba(34, 211, 238, 0.25);
+  box-shadow:
+    0 0 0 1px rgba(167, 139, 250, 0.08),
+    0 0 28px rgba(34, 211, 238, 0.1),
+    0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+.profile-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(34, 211, 238, 0.4);
+  box-shadow:
+    0 0 0 1px rgba(167, 139, 250, 0.15),
+    0 0 40px rgba(34, 211, 238, 0.15),
+    0 8px 28px rgba(0, 0, 0, 0.4);
+}
