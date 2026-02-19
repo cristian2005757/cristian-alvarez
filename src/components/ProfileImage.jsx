@@ -3,10 +3,10 @@ import ImageWithFallback from "./ImageWithFallback";
 export default function ProfileImage() {
   return (
     <ImageWithFallback
-      src="/images/profile.jpg"
+      src="/images/profile.jpeg"
       sources={[
+        "/images/profile.jpeg",
         "/images/profile.jpg",
-        "/images/Profile.jpg",
         "https://placehold.co/400x400/27272a/52525b?text=CA",
       ]}
       alt="Foto de perfil"

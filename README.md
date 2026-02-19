@@ -75,7 +75,7 @@ Para adaptar el portafolio a otro perfil, edita los archivos en `src/data/`:
 
 ## Assets
 
-- **Foto de perfil:** `public/images/profile.jpg` (minúsculas para compatibilidad con Vercel/Linux)
+- **Foto de perfil:** `public/images/profile.jpeg` (minúsculas para compatibilidad con Vercel/Linux)
 - **Imágenes de experiencia:** `public/experience/`
 - **Imágenes de proyectos:** `public/images/projects/`
 - **CV:** `public/cv/`

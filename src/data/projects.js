@@ -1,6 +1,8 @@
 export const projects = [
   {
     title: "Bodega Portilla - Catálogo Web",
+    category: "web",
+    status: "live",
     description:
       "Catálogo web estático para Bodega Portilla, con accesos por categoría a PDFs, optimizado para móvil y compartir por WhatsApp.",
     case: "Solucioné el problema de compartir catálogo por WhatsApp con navegación por categorías y diseño mobile-first.",
@@ -15,6 +17,8 @@ export const projects = [
   },
   {
     title: "API CRUD JWT + PostgreSQL",
+    category: "api",
+    status: "production",
     description:
       "API REST con autenticación JWT, roles (admin/usuario) y CRUD con PostgreSQL. Incluye paginación, filtros y documentación de endpoints.",
     case: "Backend escalable: auth JWT, roles, CRUD documentado y listo para conectar con frontend.",
@@ -29,6 +33,8 @@ export const projects = [
   },
   {
     title: "Casino Slots JS",
+    category: "game",
+    status: "live",
     description:
       "Slots en Vanilla JS con ES Modules, RNG seed, autoplay y enfoque en UI/UX.",
     case: "Enfoque UI/UX: animaciones, autoplay, seed RNG verificable, arquitectura modular.",
@@ -43,6 +49,8 @@ export const projects = [
   },
   {
     title: "Baciloscopia Interactiva",
+    category: "web",
+    status: "live",
     description:
       "Proyecto interactivo enfocado en experiencia educativa. Web ligera, fácil de usar y desplegar.",
     case: "Herramienta educativa: simulador de práctica, validación de aciertos y exportación de reportes JSON.",
@@ -57,6 +65,8 @@ export const projects = [
   },
   {
     title: "Suite Operaciones",
+    category: "web",
+    status: "live",
     description:
       "Dashboard operativo para gestión y seguimiento. Interfaces claras y orientadas a productividad.",
     case: "Dashboard funcional: gestión visual, métricas y flujos de trabajo.",
@@ -71,6 +81,8 @@ export const projects = [
   },
   {
     title: "Arcade Shooter Platformer",
+    category: "game",
+    status: "live",
     description:
       "Juego arcade 2D con Canvas, controles fluidos, disparo y dash. Enfoque en gameplay y performance.",
     case: "Game dev: physics, controles responsivos, SFX y arquitectura de estados.",

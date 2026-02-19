@@ -1,4 +1,7 @@
+"use client";
+
 import { skills } from "@/data/skills";
+import { motion } from "framer-motion";
 
 const icons = {
   Lenguajes: (
@@ -43,25 +46,38 @@ export default function Toolbox() {
   return (
     <div className="grid gap-6 md:grid-cols-2">
       {Object.entries(skills).map(([group, items]) => (
-        <div
+        <motion.div
           key={group}
-          className="flex gap-4 rounded-2xl border border-zinc-800 bg-zinc-900/30 p-6 transition duration-300 hover:border-cyan-500/30 hover:shadow-[0_0_20px_rgba(34,211,238,0.06)]"
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-30px" }}
+          transition={{ duration: 0.35 }}
+          className="flex gap-4 rounded-2xl border border-zinc-800 bg-zinc-900/30 p-6 transition duration-300 hover:border-cyan-500/25"
         >
           <div className="shrink-0">{icons[group] || icons.Extras}</div>
-          <div className="min-w-0">
+          <div className="min-w-0 flex-1">
             <h3 className="text-base font-semibold text-zinc-100">{group}</h3>
-            <div className="mt-4 flex flex-wrap gap-2">
+            <div className="mt-4 space-y-3">
               {items.map((s) => (
-                <span
-                  key={s}
-                  className="rounded-full border border-zinc-700 px-3 py-1 text-xs text-zinc-300 transition hover:border-cyan-500/30 hover:text-cyan-200/90"
-                >
-                  {s}
-                </span>
+                <div key={s.name}>
+                  <div className="flex justify-between text-xs">
+                    <span className="text-zinc-300">{s.name}</span>
+                    <span className="text-cyan-400/90">{s.level}%</span>
+                  </div>
+                  <div className="mt-1 h-1.5 overflow-hidden rounded-full bg-zinc-800">
+                    <motion.div
+                      initial={{ width: 0 }}
+                      whileInView={{ width: `${s.level}%` }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                      className="h-full rounded-full bg-gradient-to-r from-cyan-500/80 to-cyan-400/60"
+                    />
+                  </div>
+                </div>
               ))}
             </div>
           </div>
-        </div>
+        </motion.div>
       ))}
     </div>
   );
